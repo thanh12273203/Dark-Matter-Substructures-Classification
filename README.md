@@ -7,14 +7,14 @@ This repository contains the code and resources for the final project in the PH4
 The goal of this project is to classify dark matter substructures using simulated strong lensing images. We employed various deep learning frameworks, including Convolutional Neural Networks (CNNs) and Transformers, to analyze and compare their performance. Our results show that EfficientNet_B0 achieved the highest accuracy and AUC, while Lensformer demonstrated the lowest loss.
 
 ## Data Description
-The dataset comprises simulated strong lensing images generated using the `lenstronomy` Python library. These images are categorized into three classes: `no_sub` (no substructure), `cdm` (cold dark matter), and `axion` (axion dark matter). Each image is a single-channel NPY file of 64x64 pixels.
+The dataset is from **DeepLense**'s [simulations](https://github.com/mwt5345/DeepLenseSim/tree/main/Model_III). It comprises simulated strong lensing images generated using the `lenstronomy` Python library. These images are categorized into three classes: `no_sub` (no substructure), `cdm` (cold dark matter), and `axion` (axion dark matter). Each image is a single-channel NPY file of 64x64 pixels.
 
 - **Train dataset size**: 80,457 images
 - **Validation dataset size**: 8,939 images
 - **Test dataset size**: 15,000 images
 
 ## Models and Methods
-We evaluated several deep learning models:
+We evaluated several deep-learning models:
 - CNN
 - ResNet18
 - EfficientNet_B0
@@ -22,7 +22,7 @@ We evaluated several deep learning models:
 - Convolutional Transformer (CvT)
 - Lensformer
 
-Each model was trained for 100 epochs using Cross Entropy Loss and the Adam optimizer. The primary metric for evaluating the models' performance was the area-under-the-curve (AUC) metric.
+Each model was trained for 100 epochs using Cross-Entropy Loss and the Adam optimizer. The primary metric for evaluating the models' performance was the area under the receiver operating characteristic curve (ROC-AUC).
 
 ## Results
 After 100 epochs of training:
